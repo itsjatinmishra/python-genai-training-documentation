@@ -20,15 +20,21 @@ Technologies covered:
 
 ---
 
-# 📚 1. Python Fundamentals
+# 📚 3. Django Fundamentals
 
-## 🔹 Data Types
-- int
-- float
-- string
-- list
-- tuple
-- dictionary
+## 🔹 What is Django
+- High level Python Web Framework
+- Designed for fast, secure, scalable
+- open-source & community-driven
+- Follows MVT (Model-View-Template) architecture
+- Moto: "The web framework for perfectionists with deadlines"
+
+## 🔹 Key Features
+- Batteries Included - Build-in tools for authentications, admin panel, ORM, etc.
+- Scalable - From small apps to large-scale platforms
+- Secure - Protects against SQL Injection, XSS, CSRF
+- Cross-Platform - Works on Windows, Mac, Linux
+- Strong Community Support - Large ecosystem of plugins and tutorials
 
 Example:
 
