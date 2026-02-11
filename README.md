@@ -51,3 +51,70 @@ Pinterest - Image Sharing Platform
 Mozilla - Add-ons Store
 
 Also best for blog website, e-commerce websites and social media platforms
+
+```
+
+# 🔹 MVT Architecture in Django
+
+---
+
+## 📌 What is MVT?
+
+**MVT (Model–View–Template)** is Django’s architectural pattern that separates:
+
+- Data handling  - Model
+- Business logic - View
+- User Interface - Template
+
+This separation helps in building clean, scalable, and maintainable applications.
+
+---
+
+## 📦 Components of MVT
+
+### 1️⃣ Model
+
+```python
+# models.py
+from django.db import models
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+```
+- Manages database structure
+- Handles data logic
+- Uses Django ORM
+
+### 2️⃣ View
+
+```python
+# views.py
+from django.shortcuts import render
+from .models import Student
+
+def student_list(request):
+    students = Student.objects.all()
+    return render(request, "students.html", {"students": students})
+```
+- Handles HTTP requests
+- Connects Model and Template
+- Contains business logic
+
+### 3️⃣ Template
+
+``` html
+<!-- students.html -->
+<h1>Student List</h1>
+{% for student in students %}
+  <p>{{ student.name }} - {{ student.age }}</p>
+{% endfor %}
+```
+
+- Handles UI (HTML + Django Template Language)
+- Displays dynamic data
+
+## 🔄 MVT Flow
+```text
+User → URL → View → Model → Template → Response
+```
