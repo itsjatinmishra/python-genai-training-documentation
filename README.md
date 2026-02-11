@@ -36,9 +36,18 @@ Technologies covered:
 - Cross-Platform - Works on Windows, Mac, Linux
 - Strong Community Support - Large ecosystem of plugins and tutorials
 
-Example:
+## 🔹 Why Use Django ?
+- Fast Development - Build project quickly
+- Security - Inbuilt security best practices
+- Scalability - Handles hight traffic and large datasets
+- Built-in Admin Panel - Manage data without extra coding
+- Reusable Code - Write once, use multiple times
+
+Real World Use:
 
 ```python
-name = "Jatin"
-age = 23
-print(name, age)
+Instagram - Socail Media
+Pinterest - Image Sharing Platform
+Mozilla - Add-ons Store
+
+Also best for blog website, e-commerce websites and social media platforms
