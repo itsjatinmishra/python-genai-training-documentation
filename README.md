@@ -118,3 +118,323 @@ def student_list(request):
 ```text
 User → URL → View → Model → Template → Response
 ```
+
+
+
+# 🐍 Django Setup Guide (Windows)
+### By Jatin Mishra
+
+This documentation explains step-by-step how to:
+
+- Install Python on Windows
+- Install Django
+- Create a Django Project
+- Create an App
+- Run the Development Server
+- Setup Database & Admin Panel
+
+---
+
+# 🐍 1️⃣ Install Python on Windows
+
+## Step 1: Download Python
+
+Go to:
+
+https://www.python.org/downloads/
+
+Click **Download Python (Latest Version)**
+
+---
+
+## Step 2: Install Python
+
+⚠️ IMPORTANT:
+
+✔️ Check the box **"Add Python to PATH"**
+
+Then click:
+
+Install Now
+
+---
+
+## Step 3: Verify Installation
+
+Open **Command Prompt (cmd)** and run:
+
+```bash
+python --version
+```
+
+OR
+
+```bash
+python -V
+```
+
+If installed correctly, you will see:
+
+```
+Python 3.x.x
+```
+
+---
+
+# 📦 2️⃣ Check pip Installation
+
+Run:
+
+```bash
+pip --version
+```
+
+If version appears → pip installed successfully ✅
+
+---
+
+# 📁 3️⃣ Create Project Folder
+
+Move to Desktop (or preferred location):
+
+```bash
+cd Desktop
+```
+
+Create new folder:
+
+```bash
+mkdir django_projects
+cd django_projects
+```
+
+---
+
+# 🌱 4️⃣ Create Virtual Environment
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate virtual environment:
+
+```bash
+venv\Scripts\activate
+```
+
+If activated successfully, you will see:
+
+```
+(venv)
+```
+
+---
+
+# 🚀 5️⃣ Install Django
+
+Inside activated virtual environment:
+
+```bash
+pip install django
+```
+
+Check Django version:
+
+```bash
+django-admin --version
+```
+
+---
+
+# 🏗️ 6️⃣ Create Django Project
+
+Create project:
+
+```bash
+django-admin startproject myproject
+```
+
+Go inside project:
+
+```bash
+cd myproject
+```
+
+Project Structure:
+
+```
+myproject/
+│
+├── manage.py
+└── myproject/
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    ├── asgi.py
+    └── wsgi.py
+```
+
+---
+
+# ▶️ 7️⃣ Run Development Server
+
+Run:
+
+```bash
+python manage.py runserver
+```
+
+You will see:
+
+```
+Starting development server at http://127.0.0.1:8000/
+```
+
+Open browser and visit:
+
+```
+http://127.0.0.1:8000/
+```
+
+If Django welcome page appears → SUCCESS 🎉
+
+---
+
+# 📱 8️⃣ Create Django App
+
+Inside project folder (where manage.py exists):
+
+```bash
+python manage.py startapp myapp
+```
+
+New structure:
+
+```
+myproject/
+│
+├── myapp/
+├── myproject/
+└── manage.py
+```
+
+---
+
+# 🔗 9️⃣ Register App in settings.py
+
+Open:
+
+```
+myproject/settings.py
+```
+
+Find:
+
+```python
+INSTALLED_APPS = [
+```
+
+Add your app:
+
+```python
+'myapp',
+```
+
+Example:
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp',
+]
+```
+
+Save the file.
+
+---
+
+# 🗄️ 🔟 Run Migrations (Database Setup)
+
+Create migration files:
+
+```bash
+python manage.py makemigrations
+```
+
+Apply migrations:
+
+```bash
+python manage.py migrate
+```
+
+This sets up the database (SQLite by default).
+
+---
+
+# 👤 1️⃣1️⃣ Create Superuser (Admin Panel)
+
+Run:
+
+```bash
+python manage.py createsuperuser
+```
+
+Enter:
+
+- Username
+- Email
+- Password
+
+Run server again:
+
+```bash
+python manage.py runserver
+```
+
+Visit:
+
+```
+http://127.0.0.1:8000/admin/
+```
+
+Login using superuser credentials.
+
+Admin panel working successfully ✅
+
+---
+
+# 📌 Important Commands Summary
+
+| Task | Command |
+|------|----------|
+| Create virtual environment | `python -m venv venv` |
+| Activate venv | `venv\Scripts\activate` |
+| Install Django | `pip install django` |
+| Create project | `django-admin startproject myproject` |
+| Run server | `python manage.py runserver` |
+| Create app | `python manage.py startapp myapp` |
+| Make migrations | `python manage.py makemigrations` |
+| Apply migrations | `python manage.py migrate` |
+| Create superuser | `python manage.py createsuperuser` |
+
+---
+
+# 🎯 Conclusion
+
+You have successfully:
+
+- Installed Python
+- Installed Django
+- Created a Django project
+- Created an app
+- Configured database
+- Accessed admin panel
+
+This documentation will be continuously updated as I grow in Full Stack Development and Generative AI 🚀
